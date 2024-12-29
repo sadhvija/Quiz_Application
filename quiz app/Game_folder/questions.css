@@ -1,0 +1,260 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(https://img.freepik.com/premium-photo/watercolor-background-simple-hand-drawn_82802-376.jpg?w=360);
+    background-repeat: no-repeat;
+    background-size: 110vw;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    height: 18rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.question-container {
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 40rem;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.options button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(27, 210, 64, 0.9);
+    color: black;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.options button:hover {
+    background: #88aaec;
+    transform: scale(1.05);
+}
+
+#timer {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.5em;
+}
+
+#quizTitle {
+    color: black;
+}
+
+#progress {
+    color: black;
+}
+
+#submit {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4ca34f;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#submit:hover {
+    background-color: #5edb64;
+    font-weight: 600;
+    transform: scale(1.05);
+}
+
+.question strong {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Timer progress bar */
+.timer-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.timer-bar {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 170, 255, 0.7);
+    border-radius: 10px;
+    transition: width 1s linear;
+}
+
+#previous,
+#Next {
+    background-color: rgba(0, 170, 255, 0.7);
+
+    color: black;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}
+
+#previous:hover {
+    background-color: red;
+    transform: scale(1.05);
+    font-weight: 600;
+}
+
+#Next:hover {
+    background-color: rgba(27, 210, 64, 0.9);
+    transform: scale(1.05);
+    font-weight: 600;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Media Query for tablets (768px and below) */
+@media screen and (min-width:480px) and (max-width: 768px) {
+    body {
+        background-size: 100% auto;
+        height: auto;
+        background-image: url(https://marketplace.canva.com/EAGS_qOXjpI/1/0/800w/canva-blue-and-purple-gradient-background-instagram-post-tyx2VpF2bkk.jpg);
+        background-size: cover;
+    }
+
+    .question-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .navigation button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    #submit {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+/* Media Query for mobile devices (480px and below) */
+@media screen and (min-width:0px) and (max-width: 480px) {
+    body {
+        background-size: 100% auto;
+        height: auto;
+        background-image: url(https://img.freepik.com/premium-vector/vibrant-simple-background-with-white-space-custom-content_98100-4177.jpg?semt=ais_hybrid);
+        background-size: cover;
+    }
+
+    .question-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .question {
+        font-size: 16px;
+    }
+
+    .options {
+        font-size: 14px;
+    }
+
+    .navigation button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        font-size: 12px;
+    }
+
+    #submit {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #timer {
+        font-size: 14px;
+    }
+}
+
+/* Media Query for larger screens (1200px and above) */
+@media screen and (min-width:768px) and (max-width: 1200px) {
+    body {
+        background-size: 100% auto;
+        height: auto;
+        background-image: url(https://img.freepik.com/premium-vector/gradient-abstract-background_1139419-99.jpg);
+        background-size: cover;
+    }
+
+    .question-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .question {
+        font-size: 20px;
+    }
+
+    .options {
+        font-size: 18px;
+    }
+
+    .navigation button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        font-size: 12px;
+    }
+
+    #submit {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}

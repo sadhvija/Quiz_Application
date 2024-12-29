@@ -1,0 +1,214 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/premium-photo/watercolor-background-simple-hand-drawn_82802-376.jpg?w=360);
+    background-size: 100% 120%;
+    animation: animation 5s infinite alternate;
+    color: #ffffff;
+}
+
+#loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@keyframes animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.loginPage {
+    margin: 0 auto;
+    padding: 2em;
+    width: 90%;
+    max-width: 400px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    animation: fadeIn 0.8s ease-in-out;
+    box-shadow: rgb(205, 201, 197) 2px 2px 2px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #0f2862;
+    font-weight: 600;
+    font-size: 1.8em;
+}
+
+.userInput {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+    margin-right: 20px;
+}
+
+label {
+    font-size: 15px;
+    color: black;
+}
+
+.userInput input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.userInput input:focus {
+    outline: none;
+    border-color: #044ffd;
+    box-shadow: 0 0 5px rgba(15, 40, 98, 0.3);
+}
+
+#error {
+    color: red;
+    font-size: 0.9em;
+    margin: -10px 0 15px;
+}
+
+#btn {
+    background-color: #044ffd;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btn:hover {
+    background-color: #2b4d8f;
+    transform: translateY(-1px);
+}
+
+#btn:active {
+    transform: translateY(0);
+}
+
+.existedAccount {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #044ffd;
+}
+
+.existedAccount a {
+    color: #044ffd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.existedAccount a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for responsiveness */
+@media (min-width:480px) and (max-width: 768px) {
+    body {
+        background-size: 100% auto;
+        height: auto;
+        background-image: url(https://marketplace.canva.com/EAGS_qOXjpI/1/0/800w/canva-blue-and-purple-gradient-background-instagram-post-tyx2VpF2bkk.jpg);
+        background-size: cover;
+        
+    }
+
+    .loginPage {
+        max-width: 70%;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .userInput input {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 10px;
+    }
+}
+
+@media (min-width:0px) and (max-width: 480px) {
+    body {
+        background-size: 100% auto;
+        height: auto;
+        background-image: url(https://img.freepik.com/premium-vector/vibrant-simple-background-with-white-space-custom-content_98100-4177.jpg?semt=ais_hybrid);
+        background-size: cover;
+    }
+
+    .loginPage {
+       
+        width: 70%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .userInput input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .existedAccount {
+        font-size: 12px;
+    }
+
+    .forgot-password {
+        font-size: 12px;
+    }
+}
+
+@media (min-width:768px) and (max-width: 1200px) {
+    body {
+        background-size: 100% auto;
+        height: auto;
+        background-image: url(https://img.freepik.com/premium-vector/gradient-abstract-background_1139419-99.jpg);
+        background-size: cover;
+    }
+
+    .loginPage {
+        width: 80%;
+    }
+}
