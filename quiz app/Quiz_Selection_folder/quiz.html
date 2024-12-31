@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./quiz.css">
+</head>
+
+<body>
+    <h2>Select a Language for the Quiz</h2>
+    <div class="container">
+        <button class="language" onclick="startQuiz('HTML')">
+            <h3>HTML</h3>
+        </button>
+        <button class="language" onclick="startQuiz('CSS')">
+            <h3>CSS</h3>
+        </button>
+        <button class="language" onclick="startQuiz('JAVASCRIPT')">
+            <h3>JAVASCRIPT</h3>
+        </button>
+        <button class="language" onclick="startQuiz('JAVA')">
+            <h3>JAVA</h3>
+        </button>
+        <button class="language" onclick="startQuiz('PYTHON')">
+            <h3>PYTHON</h3>
+        </button>
+
+
+    </div>
+    <button id="logout" onclick="logout()">Log Out</button>
+    <audio id="languageSelectAudio" src="../Audio_folder/click.wav" preload="auto"></audio>
+
+    <script src="./quiz.js"></script>
+</body>
+
+</html>
